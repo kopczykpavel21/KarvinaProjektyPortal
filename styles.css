@@ -280,9 +280,20 @@ body::before {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .program-card {
   display: grid;
   gap: 14px;
+}
+
+.program-card-active {
+  border-color: rgba(13, 92, 99, 0.3);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .program-card .meta-row,
@@ -338,6 +349,53 @@ body::before {
 
 .split-layout {
   grid-template-columns: 1fr 1fr;
+}
+
+.detail-layout,
+.project-detail-layout {
+  margin-top: 18px;
+}
+
+.detail-card,
+.project-summary {
+  display: grid;
+  gap: 18px;
+}
+
+.detail-meta,
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.detail-item {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+}
+
+.detail-item strong {
+  font-size: 0.92rem;
+}
+
+.detail-item-wide {
+  grid-column: 1 / -1;
+}
+
+.detail-summary {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .timeline-step {
@@ -465,6 +523,12 @@ body::before {
   overflow: hidden;
 }
 
+.project-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -528,6 +592,29 @@ tbody tr:hover {
   color: var(--muted);
 }
 
+.attachments-list {
+  display: grid;
+  gap: 12px;
+}
+
+.attachment-card {
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.attachment-card h4 {
+  margin: 0 0 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.05rem;
+}
+
+.attachment-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .board-footer {
   display: flex;
   justify-content: space-between;
@@ -539,8 +626,11 @@ tbody tr:hover {
 @media (max-width: 980px) {
   .hero,
   .split-layout,
+  .project-layout,
   .admin-layout,
-  .card-grid {
+  .card-grid,
+  .source-grid,
+  .detail-grid {
     grid-template-columns: 1fr;
   }
 

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karviná projekty | Portál grantových programů</title>
+    <title>Karviná granty a dotace | Portál programů a projektů</title>
     <meta
       name="description"
-      content="Ukázkový portál grantových programů města Karviná. Přehled programů Voucher pro začínající podnikatele, Kreativní business a Podpora sportovních aktivit."
+      content="Ukázkový portál grantů a dotací města Karviná se synchronizovaným přehledem programů, dokumentů a projektovým dashboardem."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,162 +23,180 @@
           <div class="brand-mark">K</div>
           <div>
             <p class="eyebrow">Město Karviná</p>
-            <h1>Portál grantových programů</h1>
+            <h1>Portál grantů a dotací</h1>
           </div>
         </div>
         <nav class="site-nav">
+          <a href="#zdroje">Zdroje</a>
           <a href="#programy">Programy</a>
-          <a href="#jak-to-funguje">Jak to funguje</a>
-          <a href="#moje-zadosti">Moje žádosti</a>
-          <a href="#admin">Administrace</a>
+          <a href="#portal-projektu">ReUse portal</a>
+          <a href="#katalog">Katalog</a>
+          <a href="#administrace">Administrace</a>
         </nav>
       </header>
 
       <main>
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">Náhled veřejného portálu</p>
-            <h2>Jedno místo pro žádosti, kontrolu příloh i přehled rozhodnutí.</h2>
+            <p class="eyebrow">Synchronizováno podle oficiálních stránek</p>
+            <h2>Veřejný přehled grantů, povinných příloh a stavů projektů na jednom místě.</h2>
             <p class="hero-text">
-              Tento prototyp ukazuje, jak může vypadat jednoduchý portál pro žadatele
-              a administrátory grantových programů města Karviná. Veřejnost si může projít
-              programy Voucher pro začínající podnikatele, Kreativní business a Podpora sportovních aktivit,
-              formulář žádosti i interní workflow schvalování.
+              Tato verze portálu vychází z oficiálních stránek města Karviná
+              <strong>Granty a dotace</strong> a <strong>Poskytované městem</strong>. Ukazuje
+              aktuální i archivní programy, přímé odkazy na články města, povinné
+              dokumenty a ukázkový projektový workspace pro <strong>ReUse pro Lidi</strong>.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#programy">Prohlédnout programy</a>
-              <a class="button button-secondary" href="#admin">Zobrazit administraci</a>
+              <a class="button button-secondary" href="#portal-projektu">Otevřít projektový portal</a>
             </div>
           </div>
           <aside class="hero-panel">
             <div class="panel card pulse-card">
-              <p class="panel-label">Aktivní programy</p>
-              <h3>Kreativní business, voucher pro podnikatele a sportovní podpora</h3>
+              <p class="panel-label">Co portál umí</p>
+              <h3>Programové karty, checklist příloh, termíny a notifikace</h3>
               <ul class="panel-list">
-                <li>Ukázka veřejného přehledu aktuálních dotačních titulů</li>
-                <li>Jednotné podání žádosti a kontrola příloh</li>
-                <li>Samostatný pohled pro administrátora a komisi</li>
+                <li>Oficiální odkazy na programy a individuální dotace města</li>
+                <li>Kontrola chybějících příloh pro každý program zvlášť</li>
+                <li>Ukázkový projektový dashboard s upozorněními na termíny</li>
               </ul>
             </div>
             <div class="stats-grid" id="hero-stats"></div>
           </aside>
         </section>
 
+        <section class="section" id="zdroje">
+          <div class="section-heading">
+            <p class="eyebrow">Oficiální zdroje</p>
+            <h2>Data převzatá z webu města Karviná</h2>
+            <p>
+              Obsah portálu níže je sestaven podle oficiálních městských stránek k
+              datu <strong>29. dubna 2026</strong>.
+            </p>
+          </div>
+          <div class="source-grid" id="source-grid"></div>
+        </section>
+
         <section class="section" id="programy">
           <div class="section-heading">
             <p class="eyebrow">Programy</p>
-            <h2>Aktuální grantové programy</h2>
+            <h2>Přehled grantů a dotací</h2>
             <p>
-              Každý program obsahuje přehled termínů, okruh žadatelů, orientační výši podpory a doporučené přílohy.
+              Kliknutím na program se zobrazí detail, termíny, kontakty a povinné
+              přílohy podle oficiální stránky města.
             </p>
           </div>
           <div class="card-grid" id="program-grid"></div>
-        </section>
-
-        <section class="section" id="jak-to-funguje">
-          <div class="section-heading">
-            <p class="eyebrow">Žadatel</p>
-            <h2>Jak probíhá podání žádosti</h2>
-          </div>
-          <div class="split-layout">
-            <div class="timeline card" id="timeline"></div>
-            <div class="card">
+          <div class="split-layout detail-layout">
+            <article class="card detail-card">
               <div class="card-head">
                 <div>
-                  <p class="eyebrow">Kontrola připravenosti</p>
-                  <h3>Checklist před odesláním</h3>
+                  <p class="eyebrow">Vybraný program</p>
+                  <h3 id="detail-title">Vyberte program</h3>
                 </div>
-                <button class="button button-ghost" id="checklist-toggle" type="button">
+                <span class="status-badge" id="detail-status">-</span>
+              </div>
+              <div class="detail-meta" id="detail-meta"></div>
+              <p class="detail-summary" id="detail-summary"></p>
+              <div class="detail-grid" id="detail-grid"></div>
+              <div class="detail-links" id="detail-links"></div>
+            </article>
+
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Checklist programu</p>
+                  <h3>Povinné dokumenty a podklady</h3>
+                </div>
+                <button class="button button-ghost" id="docs-toggle" type="button">
                   Označit vše
                 </button>
               </div>
-              <div class="checklist" id="checklist"></div>
-            </div>
+              <div class="checklist" id="docs-checklist"></div>
+            </article>
           </div>
         </section>
 
-        <section class="section accent-section">
+        <section class="section accent-section" id="portal-projektu">
           <div class="section-heading">
-            <p class="eyebrow">Ukázka formuláře</p>
-            <h2>Nová žádost</h2>
+            <p class="eyebrow">Projektový portál</p>
+            <h2>Ukázka workspace pro projekt ReUse pro Lidi</h2>
             <p>
-              Interaktivní ukázka základních polí, která si mohou hodnotitelé i veřejnost
-              projít bez napojení na produkční systémy.
+              Tady je ukázka, jak by portál mohl vést konkrétní projekt, hlídat termíny,
+              připomínat chybějící přílohy a ukazovat, v jaké fázi žádost nebo vyúčtování je.
             </p>
           </div>
-          <form class="card form-shell" id="application-form">
-            <div class="form-grid">
-              <label>
-                Název projektu
-                <input name="projectName" type="text" placeholder="Např. Kreativní studio v centru Karviné" />
-              </label>
-              <label>
-                Typ žadatele
-                <select name="applicantType">
-                  <option>Spolek</option>
-                  <option>Škola</option>
-                  <option>Příspěvková organizace</option>
-                  <option>Neformální iniciativa</option>
-                </select>
-              </label>
-              <label>
-                Požadovaná částka
-                <input name="budget" type="text" placeholder="150 000 Kč" />
-              </label>
-              <label>
-                Kontaktní osoba
-                <input name="contactPerson" type="text" placeholder="Jméno a příjmení" />
-              </label>
-              <label class="full-width">
-                Popis projektu
-                <textarea
-                  name="summary"
-                  rows="5"
-                  placeholder="Stručně popište přínos projektu pro obyvatele Karviné."
-                ></textarea>
-              </label>
-            </div>
-            <div class="form-footer">
-              <p id="form-feedback">Formulář je pouze prezentační, data se nikam neodesílají.</p>
-              <button class="button button-primary" type="submit">Simulovat odeslání</button>
-            </div>
-          </form>
+          <div class="project-layout">
+            <article class="card project-summary" id="project-summary"></article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Notifikace</p>
+                  <h3>Co by vám portál připomněl</h3>
+                </div>
+              </div>
+              <div class="board-list" id="project-alerts"></div>
+            </article>
+          </div>
+          <div class="split-layout project-detail-layout">
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Milníky</p>
+                  <h3>Životní cyklus projektu</h3>
+                </div>
+              </div>
+              <div class="timeline" id="project-timeline"></div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Přílohy projektu</p>
+                  <h3>Stav nahraných dokumentů</h3>
+                </div>
+              </div>
+              <div class="attachments-list" id="project-attachments"></div>
+            </article>
+          </div>
         </section>
 
-        <section class="section" id="moje-zadosti">
+        <section class="section" id="katalog">
           <div class="section-heading">
-            <p class="eyebrow">Moje žádosti</p>
-            <h2>Přehled podaných projektů</h2>
-            <p>Žadatel zde vidí stav řízení, komentáře administrátora a další termíny.</p>
+            <p class="eyebrow">Katalog</p>
+            <h2>Všechny položky z oficiálních stránek</h2>
+            <p>
+              Kompletní katalog spojuje programové články, individuální dotace i archivní
+              položky, které jsou na městském webu veřejně dostupné.
+            </p>
           </div>
           <div class="table-card card">
             <table>
               <thead>
                 <tr>
-                  <th>Projekt</th>
-                  <th>Program</th>
-                  <th>Stav</th>
-                  <th>Další krok</th>
+                  <th>Název</th>
+                  <th>Typ</th>
+                  <th>Rok / datum</th>
+                  <th>Odkaz</th>
                 </tr>
               </thead>
-              <tbody id="applications-table"></tbody>
+              <tbody id="catalog-table"></tbody>
             </table>
           </div>
         </section>
 
-        <section class="section" id="admin">
+        <section class="section" id="administrace">
           <div class="section-heading">
-            <p class="eyebrow">Administrátor</p>
-            <h2>Interní přehled ke schválení</h2>
+            <p class="eyebrow">Administrace</p>
+            <h2>Ukázka monitoringu žádostí</h2>
             <p>
-              Demo tabule ukazuje, jak může referent nebo komise filtrovat žádosti podle
-              stavu a rychle se dostat k problematickým případům.
+              Referent nebo komise může rychle vidět, která žádost je rozpracovaná,
+              které přílohy chybí a co je třeba zkontrolovat jako další krok.
             </p>
           </div>
           <div class="admin-layout">
             <div class="card admin-filters">
               <div class="card-head">
-                <h3>Filtr</h3>
+                <h3>Filtr stavů</h3>
               </div>
               <div class="filter-list" id="status-filters"></div>
             </div>
@@ -186,9 +204,9 @@
               <div class="card-head">
                 <div>
                   <p class="eyebrow">Fronta zpracování</p>
-                  <h3>Žádosti ke kontrole</h3>
+                  <h3>Žádosti a projekty ke kontrole</h3>
                 </div>
-                <span class="pill">Demo data</span>
+                <span class="pill">Demo monitoringu</span>
               </div>
               <div class="board-list" id="admin-board-list"></div>
             </div>
