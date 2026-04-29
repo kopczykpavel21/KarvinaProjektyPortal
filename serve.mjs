@@ -16,7 +16,8 @@ const mimeTypes = {
 
 createServer(async (req, res) => {
   try {
-    const pathname = req.url === "/" ? "/index.html" : req.url;
+    const requestUrl = new URL(req.url, `http://localhost:${port}`);
+    const pathname = requestUrl.pathname === "/" ? "/index.html" : requestUrl.pathname;
     const safePath = normalize(pathname).replace(/^(\.\.[/\\])+/, "");
     const filePath = join(root, safePath);
     const ext = extname(filePath);

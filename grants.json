@@ -1,0 +1,421 @@
+{
+  "syncDate": "2026-04-29",
+  "sources": [
+    {
+      "title": "Granty a dotace",
+      "url": "https://www.karvina.cz/magistrat/granty-dotace",
+      "description": "Rozcestník města Karviná s odkazy na vyhlášené dotační tituly, sociální dotace a Fond primátora."
+    },
+    {
+      "title": "Poskytované městem",
+      "url": "https://www.karvina.cz/magistrat/poskytovane-mestem",
+      "description": "Přehled grantů, dotací a finančních podpor poskytovaných městem občanům, spolkům i firmám."
+    }
+  ],
+  "heroStatsApplicant": [
+    { "label": "Programy s podstránkou", "value": "6" },
+    { "label": "Oficiální zdroje", "value": "2" },
+    { "label": "Ukázkový projekt", "value": "1" },
+    { "label": "Role", "value": "Žadatel" }
+  ],
+  "heroStatsAdmin": [
+    { "label": "Spisy v demo frontě", "value": "4" },
+    { "label": "Priority k řešení", "value": "3" },
+    { "label": "Hodnoticí kritéria", "value": "4" },
+    { "label": "Role", "value": "Administrace" }
+  ],
+  "applicantSummary": [
+    {
+      "title": "Najít vhodný program",
+      "text": "Žadatel si podle typu projektu otevře správný dotační titul a přejde na podstránku s požadavky programu."
+    },
+    {
+      "title": "Vyplnit potřebná pole",
+      "text": "Každá podstránka programu ukazuje, jaká data je potřeba do žádosti doplnit a co si připravit před podáním."
+    },
+    {
+      "title": "Nahrát přílohy a sledovat projekt",
+      "text": "Portal ukáže checklist příloh, průběh žádosti i upozornění na další termíny a vypořádání."
+    }
+  ],
+  "adminSummary": [
+    {
+      "title": "Formální kontrola",
+      "text": "Administrátor rychle zjistí, kde chybí programové přílohy, rozpočty nebo povinná prohlášení."
+    },
+    {
+      "title": "Hodnoticí pohled",
+      "text": "Hodnotitelé mají zvlášť zobrazená orientační kritéria a mohou se soustředit na žádosti připravené pro věcné posouzení."
+    },
+    {
+      "title": "Prioritizace agendy",
+      "text": "Interní část zvýrazní vrácené nebo rizikové žádosti i projekty s blížícím se termínem vypořádání."
+    }
+  ],
+  "programs": [
+    {
+      "slug": "voucher-vii",
+      "title": "Voucher pro začínající podnikatele v Karviné VII",
+      "status": "open",
+      "statusLabel": "Otevírá se",
+      "type": "Programová dotace",
+      "summary": "Podpora začínajících a nově vzniklých podnikatelských subjektů a provozoven na území statutárního města Karviné.",
+      "window": "4. 5. 2026 až 22. 5. 2026",
+      "amount": "max. 50 000 Kč na projekt",
+      "audience": "Začínající a nově vzniklé podnikatelské subjekty a provozovny v Karviné",
+      "contact": "Ing. Klára Stáňová, 596 387 646, klara.stanova@karvina.cz",
+      "notes": "Vyhlášeno usnesením Rady města Karviné č. 2819 ze dne 25. 3. 2026.",
+      "docs": [
+        "Podmínky dotačního programu",
+        "Příloha č. 1a Žádost pro FOP",
+        "Příloha č. 1b Žádost pro PO",
+        "Příloha č. 2 Vzor smlouvy o poskytnutí dotace",
+        "Příloha č. 3 Čestné prohlášení",
+        "Příloha č. 4 Finanční vypořádání dotace a změna",
+        "Příloha č. 5 Kritéria věcného hodnocení"
+      ],
+      "formFields": [
+        { "label": "Identifikace žadatele", "description": "Název subjektu, IČO, sídlo nebo provozovna v Karviné a kontaktní osoba." },
+        { "label": "Popis podnikatelského záměru", "description": "Krátké vysvětlení, co voucher podpoří a jaký dopad bude mít projekt na rozjezd podnikání." },
+        { "label": "Požadovaná částka", "description": "Výše žádané podpory v souladu s limitem programu a struktura výdajů." },
+        { "label": "Rozpočet projektu", "description": "Přehled plánovaných nákladů v oficiální rozpočtové příloze programu." }
+      ],
+      "applicationFlow": [
+        { "title": "Otevřít podmínky programu", "description": "Nejprve si zkontrolujte, zda splňujete podmínky pro začínající nebo nově vzniklý podnikatelský subjekt." },
+        { "title": "Vyplnit správný formulář", "description": "Podle typu žadatele použijte formulář pro FOP nebo formulář pro PO." },
+        { "title": "Doplnit čestná prohlášení a rozpočet", "description": "Přiložte čestné prohlášení a vyplňte oficiální přílohu s rozpočtem a požadovanou podporou." },
+        { "title": "Odeslat žádost ve lhůtě programu", "description": "Žádost je nutné podat v termínu od 4. 5. 2026 do 22. 5. 2026." }
+      ],
+      "tips": [
+        { "level": "check", "label": "Kontrola", "title": "Zvolte správný formulář", "description": "Formulář se liší podle toho, zda žádá fyzická osoba podnikající nebo právnická osoba." },
+        { "level": "revision", "label": "Pozor", "title": "Nezapomeňte na čestné prohlášení", "description": "Bez čestného prohlášení je žádost typicky neúplná a může být vrácena." },
+        { "level": "approved", "label": "Tip", "title": "Připravte si vypořádání předem", "description": "Portal může rovnou ukázat i formulář finančního vypořádání, aby bylo jasné, jaké výdaje budete dokládat." }
+      ],
+      "links": [
+        { "label": "Oficiální článek", "url": "https://www.karvina.cz/magistrat/voucher-pro-zacinajici-podnikatele-v-karvine-vii" },
+        { "label": "Přehled Poskytované městem", "url": "https://www.karvina.cz/magistrat/poskytovane-mestem" }
+      ]
+    },
+    {
+      "slug": "sport-2026",
+      "title": "Podpora tělovýchovných a sportovních aktivit pro rok 2026",
+      "status": "closed",
+      "statusLabel": "Uzavřeno",
+      "type": "Programová dotace",
+      "summary": "Dotační program města Karviné pro sportovní činnost, kluby a organizace v roce 2026.",
+      "window": "24. 11. 2025 až 28. 11. 2025",
+      "amount": "dle programu a rozpočtu projektu",
+      "audience": "Sportovní kluby, oddíly a další oprávněné subjekty",
+      "contact": "Marcela Hübnerová, 596 387 484, marcela.hubnerova@karvina.cz",
+      "notes": "Vyhlášeno usnesením Rady města Karviné č. 2498 ze dne 22. 10. 2025.",
+      "docs": [
+        "Dotační program na podporu SPORTU 2026.pdf",
+        "Příloha č. 1 Žádost o poskytnutí dotace z rozpočtu statutárního města Karviné 2026.docx",
+        "Příloha č. 2 Rozpočet projektu.xls",
+        "Příloha č. 3 Smlouva o poskytnutí dotace - vzor.pdf",
+        "Příloha č. 4 Finanční vypořádání dotace.xlsx",
+        "Příloha č. 5 Čestné prohlášení žadatele o podporu v režimu de minimis.doc"
+      ],
+      "formFields": [
+        { "label": "Základní údaje klubu nebo spolku", "description": "Název organizace, IČO, odpovědná osoba, sportovní zaměření a členská základna." },
+        { "label": "Popis sportovní činnosti", "description": "Jaké aktivity budou podpořeny, pro koho jsou určené a jaký bude přínos pro sport v Karviné." },
+        { "label": "Rozpočet a položky", "description": "Položkový rozpočet v oficiální příloze programu sport 2026." },
+        { "label": "Režim veřejné podpory", "description": "Doložení čestného prohlášení k režimu de minimis, pokud je relevantní." }
+      ],
+      "applicationFlow": [
+        { "title": "Přečíst dotační program sport 2026", "description": "Zkontrolujte, že váš klub nebo organizace splňuje podmínky oprávněného žadatele." },
+        { "title": "Vyplnit žádost a rozpočet", "description": "Doplňte popis sportovní činnosti, cílové skupiny a oficiální rozpočet projektu." },
+        { "title": "Přiložit čestné prohlášení", "description": "Pokud je to požadováno, přiložte i čestné prohlášení v režimu de minimis." },
+        { "title": "Po schválení připravit vypořádání", "description": "Součástí procesu je i finální finanční vypořádání dotace podle městské přílohy." }
+      ],
+      "tips": [
+        { "level": "check", "label": "Kontrola", "title": "Uveďte konkrétní sportovní činnost", "description": "Hodnotitelé potřebují vidět, zda jde o pravidelnou činnost, akci nebo jiný konkrétní typ podpory." },
+        { "level": "revision", "label": "Pozor", "title": "Rozpočet musí sedět na přílohu", "description": "Nesoulad mezi textem žádosti a položkovým rozpočtem je častý důvod k doplnění." },
+        { "level": "approved", "label": "Tip", "title": "Připravte si doklady už při realizaci", "description": "Vyúčtování bývá snazší, pokud si průběžně odkládáte podklady k čerpání dotace." }
+      ],
+      "links": [
+        { "label": "Oficiální článek", "url": "https://www.karvina.cz/magistrat/podpora-telovychovnych-a-sportovnich-aktivit-pro-rok-2025-1" },
+        { "label": "Přehled Poskytované městem", "url": "https://www.karvina.cz/magistrat/poskytovane-mestem" }
+      ]
+    },
+    {
+      "slug": "kreativni-business-2025",
+      "title": "Kreativní business – podpora iniciativ mládeže 2025",
+      "status": "closed",
+      "statusLabel": "Archiv 2025",
+      "type": "Programová dotace",
+      "summary": "Mikroprojekty neformálních skupin mládeže se zaměřením na neformální vzdělávání, aktivní občanství a veřejný život města.",
+      "window": "1. 6. 2025 až 15. 9. 2025",
+      "amount": "5 000 Kč až 30 000 Kč na projekt",
+      "audience": "Neformální skupiny mládeže, obyvatelé Karviné ve věku 13 až 30 let",
+      "contact": "Ing. Klára Stáňová, 596 387 646, klara.stanova@karvina.cz",
+      "notes": "Žádosti do 31. 7. 2025 byly hodnoceny v 1. kole, do 15. 9. 2025 ve 2. kole.",
+      "docs": [
+        "Podmínky dotačního programu",
+        "Formulář Žádosti o poskytnutí dotace",
+        "Žádost o poskytnutí dotace – příloha a rozpočet",
+        "Vzor Smlouvy o poskytnutí dotace",
+        "Formulář Finanční vypořádání poskytnuté dotace"
+      ],
+      "formFields": [
+        { "label": "Název a myšlenka projektu", "description": "Krátké představení toho, co chce neformální skupina mládeže uskutečnit." },
+        { "label": "Cílová skupina a přínos pro město", "description": "Popis, komu projekt slouží a jak přispěje k aktivnímu životu v Karviné." },
+        { "label": "Rozpočet mikroprojektu", "description": "Požadovaná částka a rozpad nákladů v oficiální programové příloze." },
+        { "label": "Harmonogram a odpovědnosti", "description": "Základní plán aktivit, termíny a osoby, které povedou realizaci projektu." }
+      ],
+      "applicationFlow": [
+        { "title": "Vybrat kolo podání", "description": "Program měl dvě kola, takže bylo potřeba zvolit odpovídající termín žádosti." },
+        { "title": "Vyplnit základní žádost", "description": "Do formuláře se zapisuje hlavní záměr, cílová skupina a očekávaný přínos." },
+        { "title": "Doplnit rozpočtovou přílohu", "description": "Žádost se doplňuje oficiální přílohou s rozpočtem a konkrétními náklady." },
+        { "title": "Po realizaci dodat vypořádání", "description": "Po skončení projektu následuje finanční vypořádání a závěrečná zpráva." }
+      ],
+      "tips": [
+        { "level": "check", "label": "Kontrola", "title": "Držte se mikroprojektového rozsahu", "description": "Projekt by měl odpovídat menší lokální iniciativě a mít jasně omezený rozsah." },
+        { "level": "revision", "label": "Pozor", "title": "Rozpočet nesmí chybět", "description": "Nejčastější problém bývá chybějící příloha s rozpočtem nebo příliš obecný popis nákladů." },
+        { "level": "approved", "label": "Tip", "title": "Portal může hlídat i vyúčtování", "description": "Stejný workspace je vhodný i pro sledování závěrečné zprávy a finančního vypořádání." }
+      ],
+      "links": [
+        { "label": "Oficiální článek", "url": "https://www.karvina.cz/magistrat/dotacni-program-kreativni-business-podpora-inciativ-mladeze" },
+        { "label": "Přehled Poskytované městem", "url": "https://www.karvina.cz/magistrat/poskytovane-mestem" }
+      ]
+    },
+    {
+      "slug": "disabled-spolky-2026",
+      "title": "Podpora činnosti spolků zaměřených na podporu osob se zdravotním postižením nebo zdravotním omezením pro rok 2026",
+      "status": "closed",
+      "statusLabel": "Uzavřeno",
+      "type": "Programová dotace",
+      "summary": "Program pro celoroční činnost, konkrétní akce a rekondiční či edukační pobyty spolků zaměřených na podporu osob se zdravotním postižením nebo zdravotním omezením.",
+      "window": "2. 1. 2026 až 31. 1. 2026",
+      "amount": "dle jednotlivých titulů programu",
+      "audience": "Spolky zaměřené na podporu osob se zdravotním postižením nebo zdravotním omezením",
+      "contact": "Pavlína Fiedorová, 596 387 398; Bc. Andrea Wiechecová, 596 387 248",
+      "notes": "Program má tři tituly: celoroční činnost a materiální vybavení, konkrétní akce, rekondiční nebo edukační pobyt.",
+      "docs": [
+        "Žádost o programovou dotaci 2026",
+        "Rozpočet projektu",
+        "Zásady pro poskytování dotací",
+        "Finanční vypořádání dotace pro rok 2026",
+        "Podmínky dotačního programu 2026"
+      ],
+      "formFields": [
+        { "label": "Výběr správného titulu", "description": "Žadatel musí určit, zda žádá na celoroční činnost, konkrétní akci nebo pobyt." },
+        { "label": "Popis cílové skupiny", "description": "Uveďte, jak projekt podporuje osoby se zdravotním postižením nebo zdravotním omezením." },
+        { "label": "Rozpočet a rozsah podpory", "description": "Doplňte finanční rámec a vztah mezi výší dotace a plánovanými aktivitami." },
+        { "label": "Kapacity spolku", "description": "Stručně popište, kdo projekt zajistí a jak bude aktivita organizačně vedena." }
+      ],
+      "applicationFlow": [
+        { "title": "Zvolit titul programu", "description": "Nejprve je potřeba vybrat, do kterého z titulů vaše žádost patří." },
+        { "title": "Vyplnit žádost a rozpočet", "description": "Do formuláře se zapisuje rozsah činnosti, cílová skupina a rozpočet." },
+        { "title": "Přiložit zásady a další podklady", "description": "Žadatel si musí projít i zásady poskytování dotací a doložit požadované podklady." },
+        { "title": "Na konci dodat vypořádání", "description": "Stejně jako u jiných programů následuje závěrečné finanční vypořádání." }
+      ],
+      "tips": [
+        { "level": "check", "label": "Kontrola", "title": "Vyberte správný titul programu", "description": "Nesprávné zařazení žádosti může vést k vrácení nebo nejasnému hodnocení." },
+        { "level": "revision", "label": "Pozor", "title": "Vazba na cílovou skupinu musí být konkrétní", "description": "V textu žádosti jasně ukažte, komu je aktivita určena a jaký má přínos." },
+        { "level": "approved", "label": "Tip", "title": "Rozpočet propojte s aktivitami", "description": "Hodnotitelům pomůže, když půjde každou položku snadno spojit s konkrétní aktivitou programu." }
+      ],
+      "links": [
+        { "label": "Podmínky programu", "url": "https://www.karvina.cz/magistrat/podminky-dotacniho-programu-podpora-cinnosti-spolku-3" },
+        { "label": "Granty a dotace", "url": "https://www.karvina.cz/magistrat/granty-dotace" }
+      ]
+    },
+    {
+      "slug": "social-individual",
+      "title": "Žádost o dotaci z rozpočtu statutárního města Karviné (sociální oblast)",
+      "status": "ongoing",
+      "statusLabel": "Průběžně",
+      "type": "Individuální dotace",
+      "summary": "Dotace pro registrované sociální služby a návazné služby nejsou programové, ale jdou cestou individuálních žádostí.",
+      "window": "Průběžně podle potřeby / podáním individuální žádosti",
+      "amount": "individuální posouzení",
+      "audience": "Fyzické a právnické osoby v sociální oblasti, registrované a návazné služby",
+      "contact": "Pavlína Fiedorová, Odbor sociální",
+      "notes": "Podání elektronicky na epodatelna@karvina.cz nebo datovou schránkou es5bv8q, případně osobně či poštou.",
+      "docs": [
+        "Žádost o dotaci registrované sociální služby 2026",
+        "Žádost o dotaci návazné služby 2026",
+        "Rozpočet projektu",
+        "Čestné prohlášení k podpoře de minimis",
+        "Finanční vypořádání dotace",
+        "Přehled o úhradách plateb čerpané dotace",
+        "Zásady pro poskytování dotací"
+      ],
+      "formFields": [
+        { "label": "Typ služby", "description": "Uveďte, zda jde o registrovanou sociální službu nebo návaznou službu." },
+        { "label": "Zdůvodnění individuální žádosti", "description": "Popište, proč služba žádá individuální podporu a jaké náklady mají být kryté." },
+        { "label": "Rozpočet a přehled financování", "description": "Doplňte rozpočet projektu a další zdroje financování služby." },
+        { "label": "Veřejná podpora a čerpání", "description": "V případě potřeby přiložte dokumenty k veřejné podpoře a přehled plateb." }
+      ],
+      "applicationFlow": [
+        { "title": "Vybrat správný formulář", "description": "Rozlišuje se formulář pro registrovanou sociální službu a formulář pro návaznou službu." },
+        { "title": "Doplnit rozpočet a zdůvodnění", "description": "V individuální žádosti musí být jasně popsán účel dotace a finanční potřeba." },
+        { "title": "Podat žádost elektronicky nebo datovou schránkou", "description": "Město umožňuje podání přes epodatelnu, datovou schránku i fyzicky." },
+        { "title": "Po schválení sledovat vypořádání", "description": "Stejný workspace může žadateli připomínat vypořádání a přehled úhrad." }
+      ],
+      "tips": [
+        { "level": "check", "label": "Kontrola", "title": "Použijte správný typ formuláře", "description": "Jiný formulář se používá pro registrovanou službu a jiný pro návaznou službu." },
+        { "level": "revision", "label": "Pozor", "title": "Doložte i přehled úhrad", "description": "U sociálních dotací bývá důležité nezapomenout na přehled o úhradách plateb čerpané dotace." },
+        { "level": "approved", "label": "Tip", "title": "Portal může hlídat způsob podání", "description": "U individuálních dotací je užitečné připomenout si i správný kanál odeslání žádosti." }
+      ],
+      "links": [
+        { "label": "Oficiální stránka sociální dotace", "url": "https://www.karvina.cz/magistrat/zadost-o-dotaci-z-rozpoctu-smk" },
+        { "label": "Granty a dotace", "url": "https://www.karvina.cz/magistrat/granty-dotace" }
+      ]
+    },
+    {
+      "slug": "fond-primatora",
+      "title": "Individuální dotace z rozpočtu statutárního města Karviné / Fond primátora",
+      "status": "ongoing",
+      "statusLabel": "Průběžně",
+      "type": "Individuální dotace",
+      "summary": "Pokud žádost nespadá do vyhlášeného dotačního programu, je možné požádat o individuální dotaci z rozpočtu města – Fond primátora.",
+      "window": "Průběžně podle individuální žádosti",
+      "amount": "individuální posouzení",
+      "audience": "Fyzické a právnické osoby v oblasti sportu, kultury, školství, volného času, sociální oblasti a dalších",
+      "contact": "Marcela Hübnerová, 596 387 484; Ing. Renáta Kytková, 596 387 745",
+      "notes": "Formuláře pro individuální žádost jsou dostupné elektronicky ke stažení na oficiální stránce města.",
+      "docs": [
+        "Formulář Individuální žádost o dotaci FO 2026",
+        "Formulář Individuální žádost o dotaci PO a FOP 2026",
+        "Rozpočet projektu 2026",
+        "Vzorová smlouva o poskytnutí dotace č. 1",
+        "Vzorová smlouva o poskytnutí dotace č. 2 (FO)"
+      ],
+      "formFields": [
+        { "label": "Zdůvodnění individuální žádosti", "description": "Vysvětlete, proč projekt nespadá do standardního dotačního programu a proč žádáte individuálně." },
+        { "label": "Identifikace žadatele", "description": "Základní údaje o fyzické nebo právnické osobě podle příslušného formuláře." },
+        { "label": "Rozpočet a účel dotace", "description": "Konkrétní účel žádosti, částka a položkový rozpočet." },
+        { "label": "Očekávaný přínos projektu", "description": "Stručně popište přínos akce nebo projektu pro Karvinou a její obyvatele." }
+      ],
+      "applicationFlow": [
+        { "title": "Ověřit, že nejde o programovou dotaci", "description": "Nejdříve je potřeba ověřit, že žádost skutečně nespadá do některého z vyhlášených programů." },
+        { "title": "Zvolit formulář FO nebo PO/FOP", "description": "Vyberte správný formulář podle typu žadatele." },
+        { "title": "Přiložit rozpočet projektu", "description": "Součástí podání je i rozpočet a další podpůrné dokumenty podle povahy žádosti." },
+        { "title": "Vyčkat individuálního posouzení", "description": "Žádost pak prochází samostatným posouzením mimo programové výzvy." }
+      ],
+      "tips": [
+        { "level": "check", "label": "Kontrola", "title": "Nejdříve projděte programové výzvy", "description": "Individuální žádost dává smysl až ve chvíli, kdy projekt neodpovídá žádnému vyhlášenému programu." },
+        { "level": "revision", "label": "Pozor", "title": "Zdůvodnění musí být přesvědčivé", "description": "U Fondu primátora je zvlášť důležité dobře vysvětlit veřejný přínos a důvod individuální podpory." },
+        { "level": "approved", "label": "Tip", "title": "Použijte správný formulář", "description": "Portal může automaticky nabídnout správnou variantu formuláře podle typu žadatele." }
+      ],
+      "links": [
+        { "label": "Fond primátora", "url": "https://www.karvina.cz/magistrat/poskytovani-dotaci-a-grantu-z-rozpoctu-statutarniho-mesta" },
+        { "label": "Individuální dotace", "url": "https://www.karvina.cz/magistrat/individualni-dotace-z-rozpoctu-statutarniho-mesta-karvine" }
+      ]
+    }
+  ],
+  "project": {
+    "title": "ReUse pro Lidi",
+    "status": "check",
+    "statusLabel": "Ukázkový projekt",
+    "program": "Kreativní business – podpora iniciativ mládeže 2025",
+    "owner": "Neformální tým ReUse pro Lidi",
+    "amount": "28 000 Kč",
+    "nextDeadline": "Finanční vypořádání a závěrečná zpráva",
+    "nextDeadlineDate": "2025-12-15",
+    "summary": "Pilotní ukázka toho, jak může portál vést menší lokální projekt od žádosti přes schválení až po závěrečné vyúčtování a kontrolu příloh.",
+    "alerts": [
+      {
+        "level": "check",
+        "label": "Kontrola",
+        "title": "Chybí rozpočet ve formátu programu",
+        "description": "Portál by upozornil, že je nahraný obecný rozpočet, ale ne programová příloha „Žádost – příloha a rozpočet“."
+      },
+      {
+        "level": "revision",
+        "label": "Pozor",
+        "title": "Blíží se termín finančního vypořádání",
+        "description": "Systém může automaticky připomenout závěrečné finanční vypořádání a finální zprávu před uzávěrkou projektu."
+      },
+      {
+        "level": "approved",
+        "label": "Hotovo",
+        "title": "Formulář žádosti byl v pořádku",
+        "description": "Po podání by administrátor viděl, že základní žádost prošla formální kontrolou bez vrácení."
+      }
+    ],
+    "milestones": [
+      { "title": "Podání žádosti", "description": "Žádost byla vytvořena v programu Kreativní business – podpora iniciativ mládeže 2025." },
+      { "title": "Kontrola příloh", "description": "Portál zkontroloval formulář žádosti, přílohu s rozpočtem a vzorové vyúčtování." },
+      { "title": "Hodnocení v 1. kole", "description": "Projekt spadá mezi menší mikroprojekty a byl připraven pro rychlé hodnocení." },
+      { "title": "Realizace aktivit", "description": "Projekt přešel do realizační fáze a portal sleduje termíny, rozpočet a výstupy." },
+      { "title": "Závěrečné vypořádání", "description": "Na konci portal ověří finanční vypořádání, závěrečnou zprávu a přiložené doklady." }
+    ],
+    "attachments": [
+      { "label": "Formulář žádosti", "status": "done", "labelStatus": "Nahráno", "note": "Nahráno a validováno." },
+      { "label": "Žádost – příloha a rozpočet", "status": "missing", "labelStatus": "Chybí", "note": "Chybí oficiální programová příloha." },
+      { "label": "Vzor smlouvy / schválená smlouva", "status": "done", "labelStatus": "Nahráno", "note": "Uložena jako referenční dokument." },
+      { "label": "Finanční vypořádání dotace", "status": "pending", "labelStatus": "Čeká", "note": "Bude vyžadováno při uzavření projektu." },
+      { "label": "Závěrečná zpráva", "status": "pending", "labelStatus": "Čeká", "note": "Zatím není přiložena." }
+    ]
+  },
+  "adminCases": [
+    {
+      "project": "ReUse pro Lidi",
+      "applicant": "Neformální tým ReUse pro Lidi",
+      "status": "check",
+      "statusLabel": "Kontrola příloh",
+      "note": "Chybí programová příloha s rozpočtem a bude potřeba závěrečné finanční vypořádání."
+    },
+    {
+      "project": "Start voucher pro kavárenský provoz",
+      "applicant": "Nový podnik Karviná",
+      "status": "draft",
+      "statusLabel": "Rozpracováno",
+      "note": "Žadatel vyplnil základní formulář, ale ještě nepřiložil čestné prohlášení a vypořádání."
+    },
+    {
+      "project": "Sportovní den mládeže 2026",
+      "applicant": "TJ Mládež Karviná",
+      "status": "approved",
+      "statusLabel": "Doporučeno",
+      "note": "Žádost je formálně v pořádku a obsahuje rozpočet i přílohy programu sport 2026."
+    },
+    {
+      "project": "Sociální podpora terénní služby",
+      "applicant": "Návazná služba Karviná",
+      "status": "revision",
+      "statusLabel": "Vráceno k doplnění",
+      "note": "Je třeba doplnit přehled úhrad plateb a čestné prohlášení de minimis."
+    }
+  ],
+  "evaluationCriteria": [
+    {
+      "title": "Soulad s programem",
+      "description": "Projekt odpovídá účelu programu, cílové skupině a pravidlům dané výzvy."
+    },
+    {
+      "title": "Kvalita rozpočtu",
+      "description": "Rozpočet je přiměřený, čitelný a obsahuje způsobilé výdaje i případné spolufinancování."
+    },
+    {
+      "title": "Přínos pro Karvinou",
+      "description": "Projekt má jasný místní dopad, přínos pro obyvatele nebo konkrétní komunitu ve městě."
+    },
+    {
+      "title": "Realizovatelnost",
+      "description": "Žadatel má realistický harmonogram, kapacity a základní organizační nebo partnerské zajištění."
+    }
+  ],
+  "priorities": [
+    {
+      "level": "revision",
+      "label": "Urgentní",
+      "title": "ReUse pro Lidi",
+      "description": "Doplnit programovou přílohu s rozpočtem před uzavřením projektového spisu."
+    },
+    {
+      "level": "check",
+      "label": "Prověřit",
+      "title": "Sociální podpora terénní služby",
+      "description": "Zkontrolovat přehled úhrad plateb a čestné prohlášení de minimis."
+    },
+    {
+      "level": "approved",
+      "label": "Připraveno",
+      "title": "Sportovní den mládeže 2026",
+      "description": "Žádost je připravená pro věcné hodnocení komise bez dalších formálních zásahů."
+    }
+  ]
+}

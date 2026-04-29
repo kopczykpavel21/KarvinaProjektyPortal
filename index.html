@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karviná granty a dotace | Portál programů a projektů</title>
+    <title>Karviná granty a dotace | Přihlášení do portálu</title>
     <meta
       name="description"
-      content="Ukázkový portál grantů a dotací města Karviná se synchronizovaným přehledem programů, dokumentů a projektovým dashboardem."
+      content="Ukázkové přihlášení do portálu grantů a dotací města Karviná pro žadatele i administraci."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,268 +26,75 @@
             <h1>Portál grantů a dotací</h1>
           </div>
         </div>
-        <nav class="site-nav">
-          <a href="#role">Role</a>
-          <a href="#applicanti">Pro žadatele</a>
-          <a href="#administrace">Pro administraci</a>
-          <a href="#katalog">Katalog</a>
-        </nav>
       </header>
 
       <main>
-        <section class="hero">
+        <section class="hero hero-login">
           <div class="hero-copy">
-            <p class="eyebrow">Synchronizováno podle oficiálních stránek</p>
-            <h2>Veřejný přehled grantů, povinných příloh a stavů projektů na jednom místě.</h2>
+            <p class="eyebrow">Ukázkový vstup do systému</p>
+            <h2>Dvě samostatná rozhraní. Jedno pro žadatele, druhé pro administraci.</h2>
             <p class="hero-text">
-              Tato verze portálu vychází z oficiálních stránek města Karviná
-              <strong>Granty a dotace</strong> a <strong>Poskytované městem</strong>. Ukazuje
-              aktuální i archivní programy, přímé odkazy na články města, povinné
-              dokumenty a ukázkový projektový workspace pro <strong>ReUse pro Lidi</strong>.
+              Tato verze portálu simuluje reálné přihlášení. Po zvolení role vás přesměruje
+              buď do veřejného workspace pro žadatele, nebo do interního přehledu pro
+              administrátory a hodnotitele.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#applicanti">Vstup pro žadatele</a>
-              <a class="button button-secondary" href="#administrace">Vstup pro administraci</a>
+            <div class="role-grid">
+              <article class="card role-card role-card-applicant">
+                <p class="eyebrow">Veřejná část</p>
+                <h3>Portál pro žadatele</h3>
+                <p>Programy, termíny, formuláře, přílohy a vlastní projektový dashboard.</p>
+              </article>
+              <article class="card role-card role-card-admin">
+                <p class="eyebrow">Interní část</p>
+                <h3>Portál pro administraci a hodnotitele</h3>
+                <p>Fronta kontrol, rizika, hodnoticí kritéria a interní prioritizace práce.</p>
+              </article>
             </div>
           </div>
-          <aside class="hero-panel">
-            <div class="panel card pulse-card">
-              <p class="panel-label">Co portál umí</p>
-              <h3>Dvě oddělená rozhraní: pro žadatele a pro administraci</h3>
-              <ul class="panel-list">
-                <li>Žadatelé vidí programy, dokumenty, termíny a vlastní projekt</li>
-                <li>Administrace vidí frontu kontrol, hodnoticí pohled a rizika</li>
-                <li>Obě části pracují nad stejnými oficiálními městskými zdroji</li>
-              </ul>
+
+          <aside class="card login-card">
+            <div class="card-head">
+              <div>
+                <p class="eyebrow">Mock login</p>
+                <h3>Přihlášení do portálu</h3>
+              </div>
             </div>
-            <div class="stats-grid" id="hero-stats"></div>
+            <form id="login-form" class="form-grid single-column">
+              <label>
+                Jméno nebo e-mail
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="např. reuse@projekt.cz nebo evaluator@karvina.cz"
+                  required
+                />
+              </label>
+              <label>
+                Heslo
+                <input type="password" name="password" placeholder="libovolný text" required />
+              </label>
+              <fieldset class="role-fieldset">
+                <legend>Vyberte roli</legend>
+                <label class="radio-card">
+                  <input type="radio" name="role" value="applicant" checked />
+                  <span>Žadatel</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="role" value="admin" />
+                  <span>Administrace / hodnotitel</span>
+                </label>
+              </fieldset>
+              <div class="login-actions">
+                <button class="button button-primary" type="submit">Přihlásit se</button>
+                <p id="login-feedback">Ukázkové přihlášení pouze přesměruje na příslušnou část portálu.</p>
+              </div>
+            </form>
           </aside>
-        </section>
-
-        <section class="section" id="role">
-          <div class="section-heading">
-            <p class="eyebrow">Rozcestník rolí</p>
-            <h2>Vyberte si, pro koho je stránka určená</h2>
-            <p>
-              Portál je rozdělený na veřejné rozhraní pro žadatele a interní pracovní
-              rozhraní pro administrátory a hodnotitele.
-            </p>
-          </div>
-          <div class="role-grid">
-            <article class="card role-card role-card-applicant">
-              <p class="eyebrow">Veřejná část</p>
-              <h3>Rozhraní pro žadatele</h3>
-              <p>
-                Přehled programů, oficiálních odkazů, povinných dokumentů, termínů a
-                vlastního projektového workspace.
-              </p>
-              <ul class="panel-list">
-                <li>Vyhledání vhodného programu</li>
-                <li>Kontrola povinných příloh</li>
-                <li>Sledování stavu projektu a upozornění</li>
-              </ul>
-              <a class="button button-primary" href="#applicanti">Přejít do části pro žadatele</a>
-            </article>
-            <article class="card role-card role-card-admin">
-              <p class="eyebrow">Interní část</p>
-              <h3>Rozhraní pro administraci a hodnotitele</h3>
-              <p>
-                Fronta žádostí, prioritizace rizik, kontrola příloh, orientační hodnoticí
-                kritéria a přehled doporučení.
-              </p>
-              <ul class="panel-list">
-                <li>Formální kontrola žádostí</li>
-                <li>Hodnoticí pohled pro komisi</li>
-                <li>Monitoring termínů a chybějících podkladů</li>
-              </ul>
-              <a class="button button-secondary" href="#administrace">Přejít do části pro administraci</a>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="applicanti">
-          <div class="section-heading">
-            <p class="eyebrow">Pro žadatele</p>
-            <h2>Veřejné rozhraní pro podání a správu projektu</h2>
-            <p>
-              Tato část je určená žadatelům. Pomáhá najít správný program, zkontrolovat
-              povinné dokumenty a průběžně sledovat stav vlastního projektu.
-            </p>
-          </div>
-          <div class="applicant-summary-grid" id="applicant-summary-grid"></div>
-        </section>
-
-        <section class="section" id="zdroje">
-          <div class="section-heading">
-            <p class="eyebrow">Pro žadatele</p>
-            <h2>Oficiální zdroje a základní orientace</h2>
-            <p>
-              Obsah portálu níže je sestaven podle oficiálních městských stránek k
-              datu <strong>29. dubna 2026</strong>.
-            </p>
-          </div>
-          <div class="source-grid" id="source-grid"></div>
-        </section>
-
-        <section class="section" id="programy">
-          <div class="section-heading">
-            <p class="eyebrow">Pro žadatele</p>
-            <h2>Přehled grantů a dotací</h2>
-            <p>
-              Kliknutím na program se zobrazí detail, termíny, kontakty a povinné
-              přílohy podle oficiální stránky města.
-            </p>
-          </div>
-          <div class="card-grid" id="program-grid"></div>
-          <div class="split-layout detail-layout">
-            <article class="card detail-card">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Vybraný program</p>
-                  <h3 id="detail-title">Vyberte program</h3>
-                </div>
-                <span class="status-badge" id="detail-status">-</span>
-              </div>
-              <div class="detail-meta" id="detail-meta"></div>
-              <p class="detail-summary" id="detail-summary"></p>
-              <div class="detail-grid" id="detail-grid"></div>
-              <div class="detail-links" id="detail-links"></div>
-            </article>
-
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Checklist programu</p>
-                  <h3>Povinné dokumenty a podklady</h3>
-                </div>
-                <button class="button button-ghost" id="docs-toggle" type="button">
-                  Označit vše
-                </button>
-              </div>
-              <div class="checklist" id="docs-checklist"></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section accent-section" id="portal-projektu">
-          <div class="section-heading">
-            <p class="eyebrow">Pro žadatele</p>
-            <h2>Ukázka workspace pro projekt ReUse pro Lidi</h2>
-            <p>
-              Tady je ukázka, jak by portál mohl vést konkrétní projekt, hlídat termíny,
-              připomínat chybějící přílohy a ukazovat, v jaké fázi žádost nebo vyúčtování je.
-            </p>
-          </div>
-          <div class="project-layout">
-            <article class="card project-summary" id="project-summary"></article>
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Notifikace</p>
-                  <h3>Co by vám portál připomněl</h3>
-                </div>
-              </div>
-              <div class="board-list" id="project-alerts"></div>
-            </article>
-          </div>
-          <div class="split-layout project-detail-layout">
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Milníky</p>
-                  <h3>Životní cyklus projektu</h3>
-                </div>
-              </div>
-              <div class="timeline" id="project-timeline"></div>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Přílohy projektu</p>
-                  <h3>Stav nahraných dokumentů</h3>
-                </div>
-              </div>
-              <div class="attachments-list" id="project-attachments"></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="katalog">
-          <div class="section-heading">
-            <p class="eyebrow">Katalog</p>
-            <h2>Všechny položky z oficiálních stránek</h2>
-            <p>
-              Kompletní katalog spojuje programové články, individuální dotace i archivní
-              položky, které jsou na městském webu veřejně dostupné.
-            </p>
-          </div>
-          <div class="table-card card">
-            <table>
-              <thead>
-                <tr>
-                  <th>Název</th>
-                  <th>Typ</th>
-                  <th>Rok / datum</th>
-                  <th>Odkaz</th>
-                </tr>
-              </thead>
-              <tbody id="catalog-table"></tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="section" id="administrace">
-          <div class="section-heading">
-            <p class="eyebrow">Pro administraci a hodnotitele</p>
-            <h2>Interní rozhraní pro kontrolu a hodnocení</h2>
-            <p>
-              Referent nebo komise může rychle vidět, která žádost je rozpracovaná,
-              které přílohy chybí a co je třeba zkontrolovat jako další krok.
-            </p>
-          </div>
-          <div class="admin-summary-grid" id="admin-summary-grid"></div>
-          <div class="admin-layout">
-            <div class="card admin-filters">
-              <div class="card-head">
-                <h3>Filtr stavů</h3>
-              </div>
-              <div class="filter-list" id="status-filters"></div>
-            </div>
-            <div class="card admin-board">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Fronta zpracování</p>
-                  <h3>Žádosti a projekty ke kontrole</h3>
-                </div>
-                <span class="pill">Demo monitoringu</span>
-              </div>
-              <div class="board-list" id="admin-board-list"></div>
-            </div>
-          </div>
-          <div class="split-layout admin-detail-layout">
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Hodnotitel</p>
-                  <h3>Orientační hodnoticí kritéria</h3>
-                </div>
-              </div>
-              <div class="criteria-list" id="criteria-list"></div>
-            </article>
-            <article class="card">
-              <div class="card-head">
-                <div>
-                  <p class="eyebrow">Rizika a priority</p>
-                  <h3>Co je potřeba řešit nejdřív</h3>
-                </div>
-              </div>
-              <div class="board-list" id="priority-list"></div>
-            </article>
-          </div>
         </section>
       </main>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./landing.js"></script>
   </body>
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karviná granty | Portál pro administraci a hodnotitele</title>
+    <meta
+      name="description"
+      content="Interní rozhraní pro administraci a hodnotitele v portálu grantů a dotací města Karviná."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark">K</div>
+          <div>
+            <p class="eyebrow">Město Karviná</p>
+            <h1>Portál pro administraci a hodnotitele</h1>
+          </div>
+        </div>
+        <div class="session-bar">
+          <span class="pill" id="session-role-label">Administrace</span>
+          <span class="session-user" id="session-user"></span>
+          <a class="button button-ghost" href="./applicant.html">Přejít do části pro žadatele</a>
+          <button class="button button-secondary" id="logout-button" type="button">Odhlásit</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Interní rozhraní</p>
+            <h2>Fronta kontrol, hodnoticí pohled a rizika na jednom místě.</h2>
+            <p class="hero-text">
+              Tato část portálu je určená referentům, administrátorům a hodnotitelům.
+              Pracuje se stejnými programovými daty jako portál pro žadatele, ale nabízí
+              interní pohled na stav spisů, přílohy a priority.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#fronta">Fronta žádostí</a>
+              <a class="button button-secondary" href="#hodnoceni">Hodnoticí pohled</a>
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <div class="stats-grid" id="hero-stats"></div>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Interní přehled</p>
+            <h2>Co tady řeší administrace</h2>
+          </div>
+          <div class="admin-summary-grid" id="admin-summary-grid"></div>
+        </section>
+
+        <section class="section" id="fronta">
+          <div class="section-heading">
+            <p class="eyebrow">Fronta kontrol</p>
+            <h2>Žádosti a projekty ke zpracování</h2>
+          </div>
+          <div class="admin-layout">
+            <div class="card admin-filters">
+              <div class="card-head">
+                <h3>Filtr stavů</h3>
+              </div>
+              <div class="filter-list" id="status-filters"></div>
+            </div>
+            <div class="card admin-board">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Aktuální agenda</p>
+                  <h3>Spisy ke kontrole</h3>
+                </div>
+              </div>
+              <div class="board-list" id="admin-board-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="hodnoceni">
+          <div class="section-heading">
+            <p class="eyebrow">Hodnocení</p>
+            <h2>Orientační kritéria a priority</h2>
+          </div>
+          <div class="split-layout admin-detail-layout">
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Hodnotitel</p>
+                  <h3>Orientační kritéria</h3>
+                </div>
+              </div>
+              <div class="criteria-list" id="criteria-list"></div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Priority</p>
+                  <h3>Co je potřeba řešit nejdřív</h3>
+                </div>
+              </div>
+              <div class="board-list" id="priority-list"></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./auth.js"></script>
+    <script src="./shared.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

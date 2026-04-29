@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karviná granty | Detail programu</title>
+    <meta
+      name="description"
+      content="Detail konkrétního programu v portálu grantů a dotací města Karviná."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark">K</div>
+          <div>
+            <p class="eyebrow">Město Karviná</p>
+            <h1>Detail programu pro žadatele</h1>
+          </div>
+        </div>
+        <div class="session-bar">
+          <span class="pill" id="session-role-label">Žadatel</span>
+          <span class="session-user" id="session-user"></span>
+          <a class="button button-ghost" href="./applicant.html">Zpět na přehled programů</a>
+          <button class="button button-secondary" id="logout-button" type="button">Odhlásit</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero hero-program">
+          <div class="hero-copy">
+            <p class="eyebrow">Podstránka programu</p>
+            <h2 id="program-title">Načítám detail programu…</h2>
+            <p class="hero-text" id="program-summary"></p>
+            <div class="hero-actions" id="program-links"></div>
+          </div>
+          <aside class="hero-panel">
+            <div class="card detail-card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Základní informace</p>
+                  <h3 id="program-status">-</h3>
+                </div>
+              </div>
+              <div class="detail-grid" id="program-meta"></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Jak podat žádost</p>
+            <h2>Vizualizace postupu pro žadatele</h2>
+          </div>
+          <div class="split-layout">
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Workflow</p>
+                  <h3>Kroky podání</h3>
+                </div>
+              </div>
+              <div class="timeline" id="program-steps"></div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Formulář</p>
+                  <h3>Pole, která je potřeba vyplnit</h3>
+                </div>
+              </div>
+              <div class="field-list" id="program-fields"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section accent-section">
+          <div class="section-heading">
+            <p class="eyebrow">Přílohy</p>
+            <h2>Dokumenty, které je potřeba odevzdat</h2>
+          </div>
+          <div class="split-layout">
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Povinné dokumenty</p>
+                  <h3>Checklist příloh</h3>
+                </div>
+                <button class="button button-ghost" id="attachments-toggle" type="button">
+                  Označit vše
+                </button>
+              </div>
+              <div class="checklist" id="program-attachments"></div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Tipy</p>
+                  <h3>Na co si dát pozor</h3>
+                </div>
+              </div>
+              <div class="board-list" id="program-tips"></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./auth.js"></script>
+    <script src="./shared.js"></script>
+    <script src="./program.js"></script>
+  </body>
+</html>

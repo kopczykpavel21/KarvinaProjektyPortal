@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karviná granty | Portál pro žadatele</title>
+    <meta
+      name="description"
+      content="Rozhraní pro žadatele v portálu grantů a dotací města Karviná."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark">K</div>
+          <div>
+            <p class="eyebrow">Město Karviná</p>
+            <h1>Portál pro žadatele</h1>
+          </div>
+        </div>
+        <div class="session-bar">
+          <span class="pill" id="session-role-label">Žadatel</span>
+          <span class="session-user" id="session-user"></span>
+          <a class="button button-ghost" href="./admin.html">Přejít do administrace</a>
+          <button class="button button-secondary" id="logout-button" type="button">Odhlásit</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Veřejné rozhraní</p>
+            <h2>Vyberte program, zkontrolujte přílohy a sledujte stav svého projektu.</h2>
+            <p class="hero-text">
+              Tato část portálu je určená žadatelům. Pomáhá najít správný dotační titul,
+              projít si konkrétní požadavky programu a sledovat projekt jako je
+              <strong>ReUse pro Lidi</strong>.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#programy">Programy</a>
+              <a class="button button-secondary" href="#muj-projekt">Můj projekt</a>
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <div class="stats-grid" id="hero-stats"></div>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <p class="eyebrow">Jak to funguje</p>
+            <h2>Co tady žadatel vyřeší</h2>
+          </div>
+          <div class="applicant-summary-grid" id="applicant-summary-grid"></div>
+        </section>
+
+        <section class="section" id="zdroje">
+          <div class="section-heading">
+            <p class="eyebrow">Oficiální zdroje</p>
+            <h2>Na jakých stránkách města je portál postavený</h2>
+          </div>
+          <div class="source-grid" id="source-grid"></div>
+        </section>
+
+        <section class="section" id="programy">
+          <div class="section-heading">
+            <p class="eyebrow">Programy</p>
+            <h2>Vyberte konkrétní dotační program</h2>
+            <p>
+              Každý detail programu má vlastní podstránku s vizualizací formuláře, polí
+              a příloh, které je potřeba dodat.
+            </p>
+          </div>
+          <div class="card-grid" id="program-grid"></div>
+        </section>
+
+        <section class="section accent-section" id="muj-projekt">
+          <div class="section-heading">
+            <p class="eyebrow">Můj projekt</p>
+            <h2>ReUse pro Lidi</h2>
+            <p>
+              Ukázka osobního workspace žadatele s upozorněními, milníky a stavem dokumentů.
+            </p>
+          </div>
+          <div class="project-layout">
+            <article class="card project-summary" id="project-summary"></article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Notifikace</p>
+                  <h3>Na co portál upozorní</h3>
+                </div>
+              </div>
+              <div class="board-list" id="project-alerts"></div>
+            </article>
+          </div>
+          <div class="split-layout project-detail-layout">
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Milníky</p>
+                  <h3>Životní cyklus projektu</h3>
+                </div>
+              </div>
+              <div class="timeline" id="project-timeline"></div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Přílohy</p>
+                  <h3>Stav dokumentů</h3>
+                </div>
+              </div>
+              <div class="attachments-list" id="project-attachments"></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./auth.js"></script>
+    <script src="./shared.js"></script>
+    <script src="./applicant.js"></script>
+  </body>
+</html>

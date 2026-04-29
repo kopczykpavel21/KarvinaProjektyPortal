@@ -80,6 +80,18 @@ body::before {
   box-shadow: var(--shadow);
 }
 
+.session-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.session-user {
+  font-weight: 700;
+  color: var(--brand-strong);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -135,6 +147,14 @@ body::before {
   box-shadow: var(--shadow);
 }
 
+.hero-login {
+  align-items: start;
+}
+
+.hero-program .hero-copy h2 {
+  max-width: 14ch;
+}
+
 .hero-copy h2 {
   font-size: clamp(2.4rem, 5vw, 4.4rem);
   line-height: 0.98;
@@ -184,6 +204,52 @@ body::before {
   color: var(--brand-strong);
   background: rgba(255, 255, 255, 0.72);
   border-color: rgba(13, 92, 99, 0.14);
+}
+
+.login-card {
+  display: grid;
+  gap: 18px;
+}
+
+.single-column {
+  grid-template-columns: 1fr;
+}
+
+.role-fieldset {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.role-fieldset legend {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.radio-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.radio-card input {
+  accent-color: var(--brand);
+}
+
+.login-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.login-actions p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .hero-panel {
@@ -322,6 +388,10 @@ body::before {
   color: var(--muted);
 }
 
+.summary-card-admin {
+  background: rgba(255, 250, 245, 0.88);
+}
+
 .program-card {
   display: grid;
   gap: 14px;
@@ -396,6 +466,11 @@ body::before {
 .project-summary {
   display: grid;
   gap: 18px;
+}
+
+.field-list {
+  display: grid;
+  gap: 12px;
 }
 
 .detail-meta,
@@ -701,7 +776,8 @@ tbody tr:hover {
   }
 
   .site-header,
-  .form-footer {
+  .form-footer,
+  .session-bar {
     flex-direction: column;
     align-items: flex-start;
   }
