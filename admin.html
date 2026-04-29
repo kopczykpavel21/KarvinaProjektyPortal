@@ -60,6 +60,7 @@
             <h2>Co tady řeší administrace</h2>
           </div>
           <div class="admin-summary-grid" id="admin-summary-grid"></div>
+          <div class="ops-grid" id="ops-grid"></div>
         </section>
 
         <section class="section" id="fronta">
@@ -67,6 +68,7 @@
             <p class="eyebrow">Fronta kontrol</p>
             <h2>Žádosti a projekty ke zpracování</h2>
           </div>
+          <div class="queue-overview-grid" id="queue-overview-grid"></div>
           <div class="admin-layout">
             <div class="card admin-filters">
               <div class="card-head">
@@ -83,6 +85,34 @@
               </div>
               <div class="board-list" id="admin-board-list"></div>
             </div>
+          </div>
+          <div class="split-layout admin-case-layout">
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Vybraný spis</p>
+                  <h3>Detail žádosti a kontroly</h3>
+                </div>
+              </div>
+              <div class="detail-grid" id="case-meta"></div>
+              <div class="detail-block">
+                <h4>Interní poznámka</h4>
+                <p id="case-note"></p>
+              </div>
+              <div class="detail-block">
+                <h4>Doporučený další krok</h4>
+                <p id="case-next-action"></p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-head">
+                <div>
+                  <p class="eyebrow">Kontrola úplnosti</p>
+                  <h3>Chybějící a hotové podklady</h3>
+                </div>
+              </div>
+              <div class="attachments-list" id="case-documents"></div>
+            </article>
           </div>
         </section>
 

@@ -402,6 +402,49 @@ body::before {
   background: rgba(255, 250, 245, 0.88);
 }
 
+.ops-grid,
+.queue-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.queue-overview-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ops-card,
+.queue-metric {
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.queue-metric strong {
+  display: block;
+  margin-top: 10px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.9rem;
+}
+
+.queue-metric-check {
+  background: rgba(201, 122, 43, 0.12);
+}
+
+.queue-metric-revision {
+  background: rgba(180, 67, 53, 0.12);
+}
+
+.queue-metric-draft {
+  background: rgba(130, 145, 168, 0.12);
+}
+
+.queue-metric-approved {
+  background: rgba(45, 147, 108, 0.12);
+}
+
 .program-card {
   display: grid;
   gap: 14px;
@@ -709,6 +752,21 @@ tbody tr:hover {
   border: 1px solid var(--line);
 }
 
+.board-card-selectable {
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.board-card-selectable:hover {
+  transform: translateY(-1px);
+  border-color: rgba(13, 92, 99, 0.24);
+}
+
+.board-card-active {
+  border-color: rgba(13, 92, 99, 0.34);
+  box-shadow: 0 12px 24px rgba(13, 92, 99, 0.08);
+}
+
 .board-card h4 {
   margin: 0 0 10px;
   font-family: "Outfit", sans-serif;
@@ -766,6 +824,22 @@ tbody tr:hover {
   color: var(--muted);
 }
 
+.detail-block {
+  display: grid;
+  gap: 8px;
+}
+
+.detail-block h4 {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+}
+
+.detail-block p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .board-footer {
   display: flex;
   justify-content: space-between;
@@ -784,7 +858,9 @@ tbody tr:hover {
   .detail-grid,
   .role-grid,
   .applicant-summary-grid,
-  .admin-summary-grid {
+  .admin-summary-grid,
+  .ops-grid,
+  .queue-overview-grid {
     grid-template-columns: 1fr;
   }
 

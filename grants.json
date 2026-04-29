@@ -52,6 +52,20 @@
       "text": "Interní část zvýrazní vrácené nebo rizikové žádosti i projekty s blížícím se termínem vypořádání."
     }
   ],
+  "adminOperations": [
+    {
+      "title": "Denní operativa",
+      "text": "Rychlé rozdělení spisů podle toho, co je potřeba jen formálně zkontrolovat a co už je připravené pro komisi."
+    },
+    {
+      "title": "Spisová kontrola",
+      "text": "Vybraný spis ukazuje konkrétní chybějící podklady, interní poznámky a doporučený další krok."
+    },
+    {
+      "title": "Hodnoticí orientace",
+      "text": "Hodnotitelé mají vedle sebe priority a kritéria, aby se mohli rychle rozhodnout, které projekty řešit nejdřív."
+    }
+  ],
   "programs": [
     {
       "slug": "voucher-vii",
@@ -352,32 +366,72 @@
   },
   "adminCases": [
     {
+      "id": "reuse-pro-lidi",
       "project": "ReUse pro Lidi",
       "applicant": "Neformální tým ReUse pro Lidi",
+      "program": "Kreativní business – podpora iniciativ mládeže 2025",
       "status": "check",
       "statusLabel": "Kontrola příloh",
-      "note": "Chybí programová příloha s rozpočtem a bude potřeba závěrečné finanční vypořádání."
+      "riskLabel": "Střední riziko",
+      "lastUpdate": "28. 4. 2026",
+      "note": "Chybí programová příloha s rozpočtem a bude potřeba závěrečné finanční vypořádání.",
+      "nextAction": "Vyžádat doplnění rozpočtové přílohy a nastavit kontrolu závěrečného vypořádání.",
+      "documents": [
+        { "label": "Formulář žádosti", "status": "done", "labelStatus": "V pořádku", "note": "Formulář prošel formální kontrolou." },
+        { "label": "Příloha a rozpočet", "status": "revision", "labelStatus": "Chybí", "note": "Žadatel zatím nenahrál programovou přílohu s rozpočtem." },
+        { "label": "Závěrečná zpráva", "status": "pending", "labelStatus": "Čeká", "note": "Bude povinná při uzavření projektu." }
+      ]
     },
     {
+      "id": "voucher-kavarna",
       "project": "Start voucher pro kavárenský provoz",
       "applicant": "Nový podnik Karviná",
+      "program": "Voucher pro začínající podnikatele v Karviné VII",
       "status": "draft",
       "statusLabel": "Rozpracováno",
-      "note": "Žadatel vyplnil základní formulář, ale ještě nepřiložil čestné prohlášení a vypořádání."
+      "riskLabel": "Nízké riziko",
+      "lastUpdate": "29. 4. 2026",
+      "note": "Žadatel vyplnil základní formulář, ale ještě nepřiložil čestné prohlášení a vypořádání.",
+      "nextAction": "Vyčkat na doplnění čestného prohlášení; následně spis přesunout do formální kontroly.",
+      "documents": [
+        { "label": "Žádost pro FOP", "status": "done", "labelStatus": "V pořádku", "note": "Základní formulář je uložen." },
+        { "label": "Čestné prohlášení", "status": "revision", "labelStatus": "Chybí", "note": "Bez čestného prohlášení nelze žádost uzavřít." },
+        { "label": "Finanční vypořádání", "status": "pending", "labelStatus": "Později", "note": "Tento dokument bude potřeba až po schválení a realizaci." }
+      ]
     },
     {
+      "id": "sportovni-den-mladeze",
       "project": "Sportovní den mládeže 2026",
       "applicant": "TJ Mládež Karviná",
+      "program": "Podpora tělovýchovných a sportovních aktivit pro rok 2026",
       "status": "approved",
       "statusLabel": "Doporučeno",
-      "note": "Žádost je formálně v pořádku a obsahuje rozpočet i přílohy programu sport 2026."
+      "riskLabel": "Nízké riziko",
+      "lastUpdate": "27. 4. 2026",
+      "note": "Žádost je formálně v pořádku a obsahuje rozpočet i přílohy programu sport 2026.",
+      "nextAction": "Předat komisi k věcnému hodnocení bez dalších formálních zásahů.",
+      "documents": [
+        { "label": "Žádost", "status": "done", "labelStatus": "V pořádku", "note": "Žádost byla zkontrolována." },
+        { "label": "Rozpočet projektu", "status": "done", "labelStatus": "V pořádku", "note": "Rozpočet odpovídá programu i textu žádosti." },
+        { "label": "Čestné prohlášení de minimis", "status": "done", "labelStatus": "V pořádku", "note": "Příloha je nahraná a ověřená." }
+      ]
     },
     {
+      "id": "socialni-podpora-terenni",
       "project": "Sociální podpora terénní služby",
       "applicant": "Návazná služba Karviná",
+      "program": "Žádost o dotaci z rozpočtu statutárního města Karviné (sociální oblast)",
       "status": "revision",
       "statusLabel": "Vráceno k doplnění",
-      "note": "Je třeba doplnit přehled úhrad plateb a čestné prohlášení de minimis."
+      "riskLabel": "Vysoké riziko",
+      "lastUpdate": "26. 4. 2026",
+      "note": "Je třeba doplnit přehled úhrad plateb a čestné prohlášení de minimis.",
+      "nextAction": "Poslat výzvu k doplnění a po návratu znovu zkontrolovat návaznost rozpočtu a přehledu úhrad.",
+      "documents": [
+        { "label": "Žádost o dotaci návazné služby", "status": "done", "labelStatus": "V pořádku", "note": "Základní formulář byl podán." },
+        { "label": "Přehled úhrad plateb", "status": "revision", "labelStatus": "Chybí", "note": "Přehled úhrad je povinný a stále není přiložen." },
+        { "label": "Čestné prohlášení de minimis", "status": "revision", "labelStatus": "Chybí", "note": "Bez této přílohy nelze spis uzavřít." }
+      ]
     }
   ],
   "evaluationCriteria": [
