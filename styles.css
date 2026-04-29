@@ -286,6 +286,42 @@ body::before {
   gap: 16px;
 }
 
+.role-grid,
+.applicant-summary-grid,
+.admin-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.applicant-summary-grid,
+.admin-summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.role-card {
+  display: grid;
+  gap: 14px;
+}
+
+.role-card-applicant {
+  background: linear-gradient(145deg, rgba(13, 92, 99, 0.1), rgba(255, 255, 255, 0.82));
+}
+
+.role-card-admin {
+  background: linear-gradient(145deg, rgba(239, 131, 84, 0.12), rgba(255, 255, 255, 0.82));
+}
+
+.summary-card {
+  display: grid;
+  gap: 10px;
+}
+
+.summary-card p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
 .program-card {
   display: grid;
   gap: 14px;
@@ -597,6 +633,29 @@ tbody tr:hover {
   gap: 12px;
 }
 
+.criteria-list {
+  display: grid;
+  gap: 12px;
+}
+
+.criteria-card {
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.criteria-card h4 {
+  margin: 0 0 8px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+}
+
+.criteria-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .attachment-card {
   padding: 18px;
   border-radius: 20px;
@@ -630,7 +689,10 @@ tbody tr:hover {
   .admin-layout,
   .card-grid,
   .source-grid,
-  .detail-grid {
+  .detail-grid,
+  .role-grid,
+  .applicant-summary-grid,
+  .admin-summary-grid {
     grid-template-columns: 1fr;
   }
 

@@ -21,6 +21,20 @@ const data = {
     { label: "Oficiální zdroje", value: "2" },
     { label: "Ukázkový projekt", value: "1" },
   ],
+  applicantSummary: [
+    {
+      title: "Najít vhodný program",
+      text: "Žadatel si podle typu projektu vybere vhodný grant, otevře oficiální článek a zkontroluje podmínky programu.",
+    },
+    {
+      title: "Zkontrolovat přílohy",
+      text: "U každého programu je samostatný checklist povinných příloh, který může žadatel použít před podáním.",
+    },
+    {
+      title: "Sledovat vlastní projekt",
+      text: "Projektový workspace ukazuje termíny, notifikace a stav dokumentů pro konkrétní žádost.",
+    },
+  ],
   programs: [
     {
       id: "voucher-vii",
@@ -349,9 +363,59 @@ const data = {
       note: "Je třeba doplnit přehled úhrad plateb a čestné prohlášení de minimis.",
     },
   ],
+  adminSummary: [
+    {
+      title: "Formální kontrola",
+      text: "Administrátor vidí, které žádosti mají chybějící povinné dokumenty, rozpočty nebo čestná prohlášení.",
+    },
+    {
+      title: "Hodnoticí pohled",
+      text: "Hodnotitelé mají oddělený přehled žádostí připravených pro věcné hodnocení a orientační kritéria.",
+    },
+    {
+      title: "Prioritizace práce",
+      text: "Interní část umí zvýraznit žádosti s blížící se uzávěrkou, vrácené žádosti i projekty bez vypořádání.",
+    },
+  ],
+  evaluationCriteria: [
+    {
+      title: "Soulad s programem",
+      description: "Projekt odpovídá účelu programu, cílové skupině a pravidlům dané výzvy.",
+    },
+    {
+      title: "Kvalita rozpočtu",
+      description: "Rozpočet je přiměřený, čitelný a obsahuje způsobilé výdaje i případné spolufinancování.",
+    },
+    {
+      title: "Přínos pro Karvinou",
+      description: "Projekt má jasný místní dopad, přínos pro obyvatele nebo konkrétní komunitu ve městě.",
+    },
+    {
+      title: "Realizovatelnost",
+      description: "Žadatel má realistický harmonogram, kapacity a základní organizační nebo partnerské zajištění.",
+    },
+  ],
+  priorities: [
+    {
+      level: "revision",
+      title: "ReUse pro Lidi",
+      description: "Doplnit programovou přílohu s rozpočtem před uzavřením projektového spisu.",
+    },
+    {
+      level: "check",
+      title: "Sociální podpora terénní služby",
+      description: "Zkontrolovat přehled úhrad plateb a čestné prohlášení de minimis.",
+    },
+    {
+      level: "approved",
+      title: "Sportovní den mládeže 2026",
+      description: "Žádost je připravená pro věcné hodnocení komise bez dalších formálních zásahů.",
+    },
+  ],
 };
 
 const heroStats = document.querySelector("#hero-stats");
+const applicantSummaryGrid = document.querySelector("#applicant-summary-grid");
 const sourceGrid = document.querySelector("#source-grid");
 const programGrid = document.querySelector("#program-grid");
 const detailTitle = document.querySelector("#detail-title");
@@ -367,8 +431,11 @@ const projectAlerts = document.querySelector("#project-alerts");
 const projectTimeline = document.querySelector("#project-timeline");
 const projectAttachments = document.querySelector("#project-attachments");
 const catalogTable = document.querySelector("#catalog-table");
+const adminSummaryGrid = document.querySelector("#admin-summary-grid");
 const statusFilters = document.querySelector("#status-filters");
 const adminBoardList = document.querySelector("#admin-board-list");
+const criteriaList = document.querySelector("#criteria-list");
+const priorityList = document.querySelector("#priority-list");
 
 let activeProgramId = data.programs[0].id;
 let activeFilter = "all";
@@ -390,6 +457,20 @@ function renderHeroStats() {
         <article class="stat-card">
           <span>${item.label}</span>
           <strong>${item.value}</strong>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderApplicantSummary() {
+  applicantSummaryGrid.innerHTML = data.applicantSummary
+    .map(
+      (item) => `
+        <article class="card summary-card">
+          <p class="eyebrow">Žadatel</p>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
         </article>
       `,
     )
@@ -614,6 +695,20 @@ function renderCatalog() {
     .join("");
 }
 
+function renderAdminSummary() {
+  adminSummaryGrid.innerHTML = data.adminSummary
+    .map(
+      (item) => `
+        <article class="card summary-card summary-card-admin">
+          <p class="eyebrow">Administrace</p>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function getFilteredCases() {
   if (activeFilter === "all") {
     return data.adminCases;
@@ -668,6 +763,41 @@ function renderAdminBoard() {
     .join("");
 }
 
+function renderCriteria() {
+  criteriaList.innerHTML = data.evaluationCriteria
+    .map(
+      (item) => `
+        <article class="criteria-card">
+          <h4>${item.title}</h4>
+          <p>${item.description}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderPriorities() {
+  priorityList.innerHTML = data.priorities
+    .map(
+      (item) => `
+        <article class="board-card">
+          <div class="application-meta">
+            <span class="status-badge ${statusClass(item.level)}">${
+              item.level === "approved"
+                ? "Připraveno"
+                : item.level === "revision"
+                  ? "Urgentní"
+                  : "Prověřit"
+            }</span>
+          </div>
+          <h4>${item.title}</h4>
+          <p>${item.description}</p>
+        </article>
+      `,
+    )
+    .join("");
+}
+
 function bindEvents() {
   docsToggle.addEventListener("click", () => {
     const inputs = [...docsChecklist.querySelectorAll("input")];
@@ -682,13 +812,17 @@ function bindEvents() {
 
 function init() {
   renderHeroStats();
+  renderApplicantSummary();
   renderSources();
   renderPrograms();
   renderProgramDetail();
   renderProject();
   renderCatalog();
+  renderAdminSummary();
   renderFilters();
   renderAdminBoard();
+  renderCriteria();
+  renderPriorities();
   bindEvents();
 }
 
