@@ -1,6 +1,11 @@
 const loginForm = document.querySelector("#login-form");
 const loginFeedback = document.querySelector("#login-feedback");
 
+const existingSession = getSession();
+if (existingSession) {
+  window.location.href = existingSession.role === "admin" ? "./admin.html" : "./applicant.html";
+}
+
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
 

@@ -8,6 +8,7 @@ const programSummary = document.querySelector("#program-summary");
 const programLinks = document.querySelector("#program-links");
 const programStatus = document.querySelector("#program-status");
 const programMeta = document.querySelector("#program-meta");
+const programSwitcher = document.querySelector("#program-switcher");
 const programSteps = document.querySelector("#program-steps");
 const programFields = document.querySelector("#program-fields");
 const programAttachments = document.querySelector("#program-attachments");
@@ -112,6 +113,18 @@ function renderProgram(program) {
   });
 }
 
+function renderProgramSwitcher(programs, activeSlug) {
+  programSwitcher.innerHTML = programs
+    .map(
+      (program) => `
+        <a class="button ${program.slug === activeSlug ? "button-primary" : "button-secondary"}" href="./program.html?slug=${encodeURIComponent(program.slug)}">
+          ${escapeHtml(program.title)}
+        </a>
+      `,
+    )
+    .join("");
+}
+
 attachmentsToggle.addEventListener("click", () => {
   const inputs = [...programAttachments.querySelectorAll("input")];
   const shouldCheck = inputs.some((input) => !input.checked);
@@ -124,6 +137,7 @@ attachmentsToggle.addEventListener("click", () => {
 
 loadGrantData().then((data) => {
   const program = data.programs.find((item) => item.slug === slug) || data.programs[0];
+  renderProgramSwitcher(data.programs, program.slug);
   renderProgram(program);
 }).catch((error) => {
   console.error(error);

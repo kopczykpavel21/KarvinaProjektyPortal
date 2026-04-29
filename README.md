@@ -1,10 +1,10 @@
 # Karvina Grant Portal
 
-Static demo portal for applicant and administrator review of local Karvina project programs.
+Static multi-page demo portal for Karvina grants and dotations with separate applicant and administration views.
 
 ## Open locally
 
-Open `index.html` directly in a browser, or run:
+Run the local preview server:
 
 ```bash
 node serve.mjs
@@ -14,11 +14,11 @@ Then open `http://localhost:4173`.
 
 ## What is included
 
-- Public overview of active grant programs
-- Applicant workflow timeline and submission checklist
-- Demo application form
-- "My applications" status table
-- Administrator review board with filtering
+- Mock login landing page
+- Separate top-level applicant page
+- Separate top-level administration/evaluator page
+- Program subpage template with fields, workflow, and attachment checklist
+- Grant data stored in `grants.json`
 - Lightweight local preview server with no dependencies
 
 ## Publishing
